@@ -1,0 +1,72 @@
+- heading "Recommended curriculum:" [level=2]
+- list:
+  - listitem:
+    - link "Responsive Web Design Certification":
+      - /url: /learn/responsive-web-design-v9/
+  - listitem:
+    - link "JavaScript Certification":
+      - /url: /learn/javascript-v9/
+  - listitem:
+    - link "Front-End Development Libraries Certification":
+      - /url: /learn/front-end-development-libraries-v9/
+  - listitem:
+    - link "Python Certification":
+      - /url: /learn/python-v9/
+  - listitem:
+    - link "Relational Databases Certification":
+      - /url: /learn/relational-databases-v9/
+  - listitem:
+    - link "Back-End Development and APIs Certification":
+      - /url: /learn/back-end-development-and-apis-v9/
+  - listitem:
+    - link "Certified Full-Stack Developer Curriculum":
+      - /url: /learn/full-stack-developer-v9/
+      - img
+      - text: ""
+- heading "Try the coding challenge of the day:" [level=2]
+- link "Go to Today's Challenge":
+  - /url: /learn/daily-coding-challenge/2026-04-03
+- heading "Learn English for Developers:" [level=2]
+- list:
+  - listitem:
+    - link "A2 English for Developers Certification (Beta)":
+      - /url: /learn/a2-english-for-developers/
+  - listitem:
+    - link "B1 English for Developers Certification (Beta)":
+      - /url: /learn/b1-english-for-developers/
+- heading "Learn Professional Spanish:" [level=2]
+- list:
+  - listitem:
+    - link "A1 Professional Spanish Certification (Beta)":
+      - /url: /learn/a1-professional-spanish/
+- heading "Learn Professional Chinese:" [level=2]
+- list:
+  - listitem:
+    - link "A1 Professional Chinese Certification (Beta)":
+      - /url: /learn/a1-professional-chinese/
+- heading "Prepare for the developer interview job search:" [level=2]
+- list:
+  - listitem:
+    - link "The Odin Project - freeCodeCamp Remix":
+      - /url: /learn/the-odin-project/
+  - listitem:
+    - link "Coding Interview Prep":
+      - /url: /learn/coding-interview-prep/
+  - listitem:
+    - link "Project Euler":
+      - /url: /learn/project-euler/
+  - listitem:
+    - link "Rosetta Code":
+      - /url: /learn/rosetta-code/
+- heading "Professional certifications:" [level=2]
+- list:
+  - listitem:
+    - link "Free Foundational C# with Microsoft Certification":
+      - /url: /learn/foundational-c-sharp-with-microsoft/
+- paragraph:
+  - text: Looking for older coursework? Check out
+  - link "our archive page":
+    - /url: /learn/archive
+  - text: .
+- link "Get started (it's free)":
+  - /url: https://api.freecodecamp.org/signin
