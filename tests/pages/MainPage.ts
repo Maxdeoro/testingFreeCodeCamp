@@ -12,6 +12,9 @@ export class MainPage extends BasePage {
     private readonly signUpLinkModalLocator: Locator;
     private readonly signUpModalHeaderLocator: Locator;
     private readonly signUpEmailInputLocator: Locator;
+    private readonly menuButtonLocator: Locator;
+    private readonly menuListLocator: Locator;
+    private readonly catalogLinkLocator: Locator;
 
     constructor(page: Page) {
         super(page);
@@ -25,6 +28,9 @@ export class MainPage extends BasePage {
         this.signUpLinkModalLocator = this.page.getByRole('link', {name: "Sign up"});
         this.signUpModalHeaderLocator = this.page.getByRole('heading', {name: 'Sign up for freeCodeCamp Learn'});
         this.signUpEmailInputLocator = this.page.getByRole('textbox', {name: "Email address"});
+        this.menuButtonLocator = this.page.getByRole('button', {name:'Menu'});
+        this.menuListLocator = this.page.locator('ul.nav-list.display-menu');
+        this.catalogLinkLocator = this.page.getByRole('link', {name: 'Catalog'});
     }
 
     async open() {
@@ -87,5 +93,37 @@ export class MainPage extends BasePage {
     async openSignUpModalForm() {
         await this.startLearningButtonLocator.click();
         await this.signUpLinkModalLocator.click();
+    };
+
+    async menuButtonVisibility() {
+        await expect(this.menuButtonLocator).toBeVisible();
+    };
+
+    async menuButtonToMatchAriaSnapshot() {
+        await expect(this.menuButtonLocator).toMatchAriaSnapshot();
+    };
+
+    async openMenuList() {
+        await this.menuButtonLocator.click();
+    };
+
+    async menuListVisibility() {
+        await this.openMenuList();
+        await expect(this.menuListLocator).toBeVisible();
+    };
+
+    async catalogLinkVisibility() {
+        await this.openMenuList();
+        await expect(this.catalogLinkLocator).toBeVisible();
+    };
+
+    async catalogLinkCount(num: number) {
+        await this.openMenuList();
+        await expect(this.catalogLinkLocator).toHaveCount(num);
+    };
+
+    async catalogLinkHasHref(HREF: string) {
+        await this.openMenuList();
+        await expect(this.catalogLinkLocator).toHaveAttribute('href', HREF);
     };
 };
