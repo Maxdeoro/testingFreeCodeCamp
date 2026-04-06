@@ -15,6 +15,7 @@ export class MainPage extends BasePage {
     private readonly menuButtonLocator: Locator;
     private readonly menuListLocator: Locator;
     private readonly catalogLinkLocator: Locator;
+    private readonly nightModeCheckboxLocator: Locator;
 
     constructor(page: Page) {
         super(page);
@@ -31,6 +32,7 @@ export class MainPage extends BasePage {
         this.menuButtonLocator = this.page.getByRole('button', {name:'Menu'});
         this.menuListLocator = this.page.locator('ul.nav-list.display-menu');
         this.catalogLinkLocator = this.page.getByRole('link', {name: 'Catalog'});
+        this.nightModeCheckboxLocator = this.page.getByRole('button', {name: 'Night Mode'});
     }
 
     async open() {
@@ -125,5 +127,14 @@ export class MainPage extends BasePage {
     async catalogLinkHasHref(HREF: string) {
         await this.openMenuList();
         await expect(this.catalogLinkLocator).toHaveAttribute('href', HREF);
+    };
+
+    async nightModeButtonClick() {
+        await this.openMenuList();
+        await this.nightModeCheckboxLocator.click();
+    };
+
+    async nightModeSwitchAttribut(attrValue: 'dark-palette' | 'light-palette') {
+        await expect(this.page.locator('body')).toHaveAttribute('class', attrValue);
     };
 };

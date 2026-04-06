@@ -83,3 +83,14 @@ test('Check catalog link count', async ({mainPage}) => {
 test('Check catalog link has correct href', async ({mainPage}) => {
     await mainPage.catalogLinkHasHref('/catalog');
 });
+
+test('check night mode click', async ({mainPage}) => {
+    test.setTimeout(60000);
+    await mainPage.nightModeButtonClick();
+});
+
+test('Check attribute on night mode switch', async ({mainPage}) => {
+    await mainPage.nightModeSwitchAttribut('light-palette');
+    await mainPage.nightModeButtonClick();
+    await mainPage.nightModeSwitchAttribut('dark-palette');
+});
