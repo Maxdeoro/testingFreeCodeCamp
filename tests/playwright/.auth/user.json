@@ -1,0 +1,149 @@
+{
+  "cookies": [
+    {
+      "name": "_csrf",
+      "value": "gk7XN3ra3oY_sG0gtUJLvUqR",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "gbuuid",
+      "value": "f8e40e09-dd5d-485c-8788-f33af238bae4",
+      "domain": "www.freecodecamp.org",
+      "path": "/",
+      "expires": 1810235476,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.925859868.1775675478",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": 1810235477.6779,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "csrf_token",
+      "value": "kQzGhukz-qGg0GhOFgA8YaKmhOJ4otKW6oEeivjqsEpVGaVoM8IQ",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "login-returnto",
+      "value": "s%3Ahttps%3A%2F%2Fwww.freecodecamp.org%2F.QrDETZ2M%2Bj4GEkB7QO%2F7f%2FVAnHAiDpf9Gadrrkj4afU",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "oauth2-redirect-state",
+      "value": "oL5chTE298jN478KpdZCEQ",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "oauth2-code-verifier",
+      "value": "X0y4h79ICKTl6w9B5l-VN1_693Gq0w2l1kLF0FsBEC0",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "did",
+      "value": "s%3Av0%3Af6413110-5e17-41b0-8b57-1c2f048b410a.g7l2W8hgGAIAMLnyobq%2F%2FWmnQ%2BsQw1h8T3Gidbn2IYw",
+      "domain": "auth.freecodecamp.org",
+      "path": "/",
+      "expires": 1807233081.471332,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "auth0",
+      "value": "s%3Av1.gadzZXNzaW9ug6ZoYW5kbGXEQExBHW3trmxGmsUVJf8Upz0seZBYrN0DjsFnpMwjVNmX3ywhXqZ-1bhdZh5qcsmrs5Jk1SYzL5-ANnYtm2a2rwOmY29va2llg6dleHBpcmVz1_9zog0Aadqc2a5vcmlnaW5hbE1heEFnZc4PcxQAqHNhbWVTaXRlpG5vbmWkc2JpZJHZIHdnR1p2NU1DS1g4ZVN2c1JYbDgxSTFjcWxPdzV6Znh0.vuGeKX4bqjhUhk9emUYGcTrIlxd6mWQMRxPRbLezXxY",
+      "domain": "auth.freecodecamp.org",
+      "path": "/",
+      "expires": 1775934681.471998,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "did_compat",
+      "value": "s%3Av0%3Af6413110-5e17-41b0-8b57-1c2f048b410a.g7l2W8hgGAIAMLnyobq%2F%2FWmnQ%2BsQw1h8T3Gidbn2IYw",
+      "domain": "auth.freecodecamp.org",
+      "path": "/",
+      "expires": 1807233081.472179,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "auth0_compat",
+      "value": "s%3Av1.gadzZXNzaW9ug6ZoYW5kbGXEQExBHW3trmxGmsUVJf8Upz0seZBYrN0DjsFnpMwjVNmX3ywhXqZ-1bhdZh5qcsmrs5Jk1SYzL5-ANnYtm2a2rwOmY29va2llg6dleHBpcmVz1_9zog0Aadqc2a5vcmlnaW5hbE1heEFnZc4PcxQAqHNhbWVTaXRlpG5vbmWkc2JpZJHZIHdnR1p2NU1DS1g4ZVN2c1JYbDgxSTFjcWxPdzV6Znh0.vuGeKX4bqjhUhk9emUYGcTrIlxd6mWQMRxPRbLezXxY",
+      "domain": "auth.freecodecamp.org",
+      "path": "/",
+      "expires": 1775934681.472301,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_cfuvid",
+      "value": "5dWlxbDKRwnjqAR9lMVK.LFSasp8_WJ.hV0AHv0JSBM-1775675481579-0.0.1.1-604800000",
+      "domain": ".auth.freecodecamp.org",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_SF1BGBDCNS",
+      "value": "GS2.1.s1775675477$o1$g0$t1775675481$j56$l0$h0",
+      "domain": ".freecodecamp.org",
+      "path": "/",
+      "expires": 1810235481.807194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.freecodecamp.org",
+      "localStorage": [
+        {
+          "name": "theme",
+          "value": "light"
+        },
+        {
+          "name": "gbFeaturesCache",
+          "value": "[[\"https://gb.api.freecodecamp.org||sdk-szxzcLoVPQcu4WH\",{\"data\":{\"status\":200,\"features\":{\"aa-test\":{\"defaultValue\":false},\"aa-test-in-component\":{\"defaultValue\":false},\"seasonal-alert\":{\"defaultValue\":true},\"progress-donation-alert\":{\"defaultValue\":true},\"gitpod-note\":{\"defaultValue\":{\"superblocks\":[\"quality-assurance\",\"back-end-development-and-apis\",\"information-security\",\"data-analysis-with-python\"]}},\"landing-page-redesign\":{\"defaultValue\":false,\"rules\":[{\"coverage\":1,\"hashAttribute\":\"id\",\"seed\":\"landing-page-redesign\",\"hashVersion\":2,\"force\":true}]},\"prefetch_ab_test\":{\"defaultValue\":false},\"exam-token-widget\":{\"defaultValue\":true},\"a11y-donation-modal\":{\"defaultValue\":false},\"show-modal-randomly\":{\"defaultValue\":false},\"show-benefits\":{\"defaultValue\":false,\"rules\":[{\"coverage\":1,\"hashAttribute\":\"id\",\"seed\":\"show-benefits\",\"hashVersion\":2,\"force\":true}]},\"landing-aa-test\":{\"defaultValue\":false},\"new-bear-animation\":{\"defaultValue\":false,\"rules\":[{\"coverage\":1,\"hashAttribute\":\"id\",\"seed\":\"new-bear-animation\",\"hashVersion\":2,\"force\":true}]},\"exam-environment\":{\"defaultValue\":true},\"gitpod-deprecated\":{\"defaultValue\":true},\"short-donation-blocks\":{\"defaultValue\":false,\"rules\":[{\"coverage\":1,\"hashAttribute\":\"id\",\"seed\":\"short-donation-blocks\",\"hashVersion\":2,\"force\":true}]},\"landing-top-skill-focused\":{\"defaultValue\":false,\"rules\":[{\"coverage\":1,\"hashAttribute\":\"id\",\"seed\":\"landing-top-skill-focused\",\"hashVersion\":2,\"force\":true}]},\"independent-lower-jaw\":{\"defaultValue\":false,\"rules\":[{\"coverage\":1,\"hashAttribute\":\"id\",\"seed\":\"independent-lower-jaw\",\"hashVersion\":2,\"force\":true}]},\"transcript-only\":{\"defaultValue\":false},\"rdb-codespaces-instructions\":{\"defaultValue\":true},\"rdb-local-instructions\":{\"defaultValue\":true},\"rdb-ona-instructions\":{\"defaultValue\":true},\"disabled_blocks\":{\"defaultValue\":[\"exam-certified-full-stack-developer\"]},\"drip-campaign\":{\"defaultValue\":true}},\"dateUpdated\":\"2026-03-18T13:23:06.039Z\"},\"version\":\"2026-03-18T13:23:06.039Z\",\"staleAt\":\"2026-04-08T19:12:16.787Z\",\"sse\":false}]]"
+        }
+      ]
+    }
+  ]
+}
