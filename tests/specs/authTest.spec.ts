@@ -13,7 +13,7 @@ test('Check Sign in with email', async ({page}) => {
 
     const emailInput = page.getByRole('textbox', {name: 'Email address'});
 
-    await emailInput.fill('maxdeoro@gmail.com');
+    await emailInput.fill('...');
 
     const continueButton = page.getByRole('button', {name: 'Continue with Email'});
     await continueButton.click();
