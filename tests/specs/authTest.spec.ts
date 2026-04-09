@@ -1,9 +1,13 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, chromium } from '@playwright/test';
 import path from 'path';
 
 const authFile = path.join(__dirname, '../playwright/.auth/user.json');
 
-test('Check Sign in with email', async ({page}) => {
+test('Check Sign in with email', async () => {
+    const browser = await chromium.launch();
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    
     test.setTimeout(180000);
 
     await page.goto('https://www.freecodecamp.org/');
