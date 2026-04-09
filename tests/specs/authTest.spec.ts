@@ -7,7 +7,7 @@ test('Check Sign in with email', async () => {
     const browser = await chromium.launch();
     const context = await browser.newContext();
     const page = await context.newPage();
-    
+
     test.setTimeout(180000);
 
     await page.goto('https://www.freecodecamp.org/');
@@ -17,7 +17,7 @@ test('Check Sign in with email', async () => {
 
     const emailInput = page.getByRole('textbox', {name: 'Email address'});
 
-    await emailInput.fill('...');
+    await emailInput.fill('process.env.EMAIL');
 
     const continueButton = page.getByRole('button', {name: 'Continue with Email'});
     await continueButton.click();
