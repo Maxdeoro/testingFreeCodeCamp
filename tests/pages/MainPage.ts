@@ -16,6 +16,8 @@ export class MainPage extends BasePage {
     private readonly menuListLocator: Locator;
     private readonly catalogLinkLocator: Locator;
     private readonly nightModeCheckboxLocator: Locator;
+    private readonly userAvatarLocator: Locator;
+    private readonly completnessProfilrLocator: Locator;
 
     constructor(page: Page) {
         super(page);
@@ -33,34 +35,63 @@ export class MainPage extends BasePage {
         this.menuListLocator = this.page.locator('ul.nav-list.display-menu');
         this.catalogLinkLocator = this.page.getByRole('link', {name: 'Catalog'});
         this.nightModeCheckboxLocator = this.page.getByRole('button', {name: 'Night Mode'});
+        this.userAvatarLocator = this.page.locator('div.avatar-container default-border');
+        this.completnessProfilrLocator = this.page.locator('div').filter({hasText: 'Add your location'});
+        // this.completnessProfilrLocator = this.page.getByText('Profile 0% complete');
     }
+
+    //actions
 
     async open() {
         await this.page.goto('https://www.freecodecamp.org/');
     };
 
+    async openAuthForm() {
+        await this.startLearningButtonLocator.click();
+    };
+
+    async openJavaScriptPage() {
+        await this.javaScriptCertificationLocator.click();
+    };
+
+    async openSignUpModalForm() {
+        await this.startLearningButtonLocator.click();
+        await this.signUpLinkModalLocator.click();
+    };
+
+    async openMenuList() {
+        await this.menuButtonLocator.click();
+    };
+
+    async nightModeButtonClick() {
+        await this.openMenuList();
+        await this.nightModeCheckboxLocator.click();
+    };
+
+    async openAuthUserMenu() {
+        await this.userAvatarLocator.click();
+    };
+
+    //assertions
+
     async curriculumLinkHasCorrectSnapshot() {
-        await expect(this.curriculumLocator).toMatchAriaSnapshot();
+        await this.checkAriaSnapshot(this.curriculumLocator);
     };
 
     async headingHasCorrectSnapshot() {
-        await expect(this.headingLocator).toMatchAriaSnapshot();
+        await this.checkAriaSnapshot(this.headingLocator);
     };
 
     async recommendedCurriculumIsVisible() {
-        await expect(this.recommendedCurriculumLocator).toBeVisible();
+        await this.checkVisibility(this.recommendedCurriculumLocator);
     };
 
     async recommendedCurriculumHasCorrectAriaSnapshot() {
-        await expect(this.recommendedCurriculumLocator).toMatchAriaSnapshot();   
+        await this.checkAriaSnapshot(this.recommendedCurriculumLocator);  
     };
 
     async startLearningNowButtonVisibility() {
-        await expect(this.startLearningButtonLocator).toBeVisible();
-    };
-
-    async openAuthForm() {
-        await this.startLearningButtonLocator.click();
+        await this.checkVisibility(this.startLearningButtonLocator);
     };
 
     async signInModalHasCorrectHeader() {
@@ -75,48 +106,35 @@ export class MainPage extends BasePage {
 
     async signUpEmailInputIsVisible() {
         await this.openSignUpModalForm();
-        await expect(this.signUpEmailInputLocator).toBeVisible();
-    };
-
-    async openJavaScriptPage() {
-        await this.javaScriptCertificationLocator.click();
+        await this.checkVisibility(this.signUpEmailInputLocator);
     };
 
     async signInModalFormIsVisible() {
         await this.startLearningButtonLocator.click();
-        await expect(this.signInModalFormLocator).toBeVisible();
+        await this.checkVisibility(this.signInModalFormLocator);
     };
 
     async signUpModalWindowLinkIsVisible() {
         await this.startLearningButtonLocator.click();
-        await expect(this.signUpLinkModalLocator).toBeVisible();
-    };
-
-    async openSignUpModalForm() {
-        await this.startLearningButtonLocator.click();
-        await this.signUpLinkModalLocator.click();
+        await this.checkVisibility(this.signUpLinkModalLocator);
     };
 
     async menuButtonVisibility() {
-        await expect(this.menuButtonLocator).toBeVisible();
+        await this.checkVisibility(this.menuButtonLocator);
     };
 
     async menuButtonToMatchAriaSnapshot() {
-        await expect(this.menuButtonLocator).toMatchAriaSnapshot();
-    };
-
-    async openMenuList() {
-        await this.menuButtonLocator.click();
+        await this.checkAriaSnapshot(this.menuButtonLocator);
     };
 
     async menuListVisibility() {
         await this.openMenuList();
-        await expect(this.menuListLocator).toBeVisible();
+        await this.checkVisibility(this.menuListLocator);
     };
 
     async catalogLinkVisibility() {
         await this.openMenuList();
-        await expect(this.catalogLinkLocator).toBeVisible();
+        await this.checkVisibility(this.catalogLinkLocator);
     };
 
     async catalogLinkCount(num: number) {
@@ -129,12 +147,11 @@ export class MainPage extends BasePage {
         await expect(this.catalogLinkLocator).toHaveAttribute('href', HREF);
     };
 
-    async nightModeButtonClick() {
-        await this.openMenuList();
-        await this.nightModeCheckboxLocator.click();
-    };
-
     async nightModeSwitchAttribut(attrValue: 'dark-palette' | 'light-palette') {
         await expect(this.page.locator('body')).toHaveAttribute('class', attrValue);
+    };
+
+    async completnessProfileMenuHasCorrectAriaSnapshot() {
+        await this.checkAriaSnapshot(this.completnessProfilrLocator); 
     };
 };
