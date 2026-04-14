@@ -1,10 +1,12 @@
 import { test as base } from '@playwright/test';
 import { MainPage } from '../pages/MainPage';
 import { CatalogPage } from '../pages/CatalogPage';
+import { ForumPage } from '../pages/ForumPage';
 
 type MyFixtures = {
     mainPage: MainPage;
     catalogPage: CatalogPage;
+    forumPage: ForumPage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -18,6 +20,11 @@ export const test = base.extend<MyFixtures>({
         await catalogPage.open();
         await use(catalogPage);
     },
+    forumPage: async ({page}, use) => {
+        const forumPage = new ForumPage(page);
+        // await forumPage.open('https://forum.freecodecamp.org/');
+        await use(forumPage);
+    }
 });
 
 export { expect } from '@playwright/test';
