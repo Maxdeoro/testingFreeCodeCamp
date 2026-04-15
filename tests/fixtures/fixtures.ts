@@ -2,11 +2,13 @@ import { test as base } from '@playwright/test';
 import { MainPage } from '../pages/MainPage';
 import { CatalogPage } from '../pages/CatalogPage';
 import { ForumPage } from '../pages/ForumPage';
+import { DonatePage } from '../pages/DonatePage';
 
 type MyFixtures = {
     mainPage: MainPage;
     catalogPage: CatalogPage;
     forumPage: ForumPage;
+    donatePage: DonatePage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -24,6 +26,10 @@ export const test = base.extend<MyFixtures>({
         const forumPage = new ForumPage(page);
         // await forumPage.open('https://forum.freecodecamp.org/');
         await use(forumPage);
+    },
+    donatePage: async ({page}, use) => {
+        const donatePage = new DonatePage(page);
+        await use(donatePage);
     }
 });
 
