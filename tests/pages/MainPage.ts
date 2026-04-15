@@ -37,7 +37,6 @@ export class MainPage extends BasePage {
         this.nightModeCheckboxLocator = this.page.getByRole('button', {name: 'Night Mode'});
         this.userAvatarLocator = this.page.locator('div.avatar-container default-border');
         this.completnessProfilrLocator = this.page.locator('div').filter({hasText: 'Add your location'});
-        // this.completnessProfilrLocator = this.page.getByText('Profile 0% complete');
     }
 
     //actions
