@@ -12,7 +12,7 @@ export class DonatePage extends BasePage {
     };
 
     async open() {
-        await this.page.goto('https://www.freecodecamp.org/donate');
+        await this.page.goto('/donate');
     };
 
     async pageContentHasCorrectAriaSnapshot() {

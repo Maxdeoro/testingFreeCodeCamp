@@ -39,8 +39,4 @@ export class ForumPage extends BasePage {
     async pageHasCorrectScreenshot() {
         await this.checkAriaSnapshot(this.pageContentLocator);
     };
-
-    // async pageHasCorrectScreenshot(screenshotName: string) {
-    //     await this.checkAriaSnapshot(this.pageContentLocator);
-    // };
 };
